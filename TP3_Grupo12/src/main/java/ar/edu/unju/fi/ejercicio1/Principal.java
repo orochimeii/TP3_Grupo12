@@ -43,11 +43,10 @@ public class Principal {
 			System.out.println("no me es posible calcular el resultado de una division por 0");
 		}
 	}
-	public static int dividirArrays(int[] arr1, int[] arr2) {
+	public static void dividirArrays(int[] arr1, int[] arr2) {
 		for(int k = 0; k < numeros.length; k++) {
 			System.out.println(numeros[k] / numeros2[k]);
 		}
-		return 0;
 	}
 
 }
