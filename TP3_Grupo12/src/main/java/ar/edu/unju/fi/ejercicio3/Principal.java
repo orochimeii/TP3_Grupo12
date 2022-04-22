@@ -10,7 +10,6 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		double[] notas = new double[5];
-		Alumno alumno = new Alumno();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Ingrese nombre");
 		String nombre = scanner.next();
@@ -18,15 +17,12 @@ public class Principal {
 		String apellido = scanner.next();
 		System.out.println("Ingrese libreta universitaria");
 		int lu = scanner.nextInt();
-		for(int i = 0; i < alumno.getNotas().length; i++) {
+		for(int i = 0; i < 5; i++) {
 			System.out.println("Ingrese nota");
 			notas[i] = scanner.nextDouble();
 		}
 		scanner.close();
-		alumno.setNombre(nombre);
-		alumno.setApellido(apellido);
-		alumno.setLu(lu);
-		alumno.setNotas(notas);
+		Alumno alumno = new Alumno(nombre, apellido, lu, notas);
 		System.out.println("Maxima nota alcanzada: " + alumno.obtenerNotaMaxima());
 		System.out.println("Promedio: " + alumno.calcularPromedio());
 	}

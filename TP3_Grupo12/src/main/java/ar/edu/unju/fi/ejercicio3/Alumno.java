@@ -39,8 +39,15 @@ public class Alumno {
 	}
 	
 	public Alumno() {
-		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	public Alumno(String nombre, String apellido, int lu, double[] notas) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.lu = lu;
+		this.notas = notas;
 	}
 	
 	public double calcularPromedio() {
